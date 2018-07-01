@@ -1,0 +1,131 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="15dp">
+
+    <TextView
+        android:id="@+id/WelcomeHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="Welcome to Coffee Ordering App"
+        android:textSize="30sp" />
+
+    <RelativeLayout
+        android:id="@+id/InnerRelativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/WelcomeHeader"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:id="@+id/quantityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="9dp"
+            android:text="Quantity:"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/negativeButtonView"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/quantityTextView"
+            android:onClick="DecrementQuantity"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/qtyDigitTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/negativeButtonView"
+            android:paddingTop="13dp"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/PositiveButtonView"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/qtyDigitTextView"
+            android:onClick="IncrementQuantity"
+            android:text="+" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/InnerRelativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/InnerRelativeLayout1"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:id="@+id/AdditionalTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="9dp"
+            android:text="Additional:"
+            android:textSize="20sp" />
+
+        <CheckBox
+            android:id="@+id/chocolateCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@id/AdditionalTextView"
+            android:onClick="Check"
+            android:text="Chocolate Topping" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/InnerRelativeLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/InnerRelativeLayout2"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:id="@+id/PriceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="9dp"
+            android:text="Price:"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/PriceDigitTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/PriceTextView"
+            android:paddingTop="15dp"
+            android:text="$0" />
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/CalculateBillButtonView"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_below="@id/InnerRelativeLayout3"
+        android:layout_marginTop="25dp"
+        android:onClick="CalculateBill"
+        android:text="Calculate Bill"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/SummaryButtonView"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_below="@id/InnerRelativeLayout3"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@id/CalculateBillButtonView"
+        android:onClick="CallUs"
+        android:text="Call Us"
+        android:textSize="15sp" />
+
+</RelativeLayout>
